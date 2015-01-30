@@ -1,0 +1,9 @@
+# Site settings
+title: 'ditikos.github.io' # Your Title
+tagline: 'Think &middot; Build &middot; Publish' # A brief tagline for your site
+sidebar_image: /images/zx-spectrum.jpg
+
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+#baseurl: /
