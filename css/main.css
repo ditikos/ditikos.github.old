@@ -350,4 +350,36 @@ ul.posts p {
   margin-bottom: 36px;
 }
 
-/* post page header = .single */
+/* post page gallery = .gallery */
+
+.gallery ul {
+  position: relative;
+  display: block;
+  padding:0;
+  margin:0;
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.gallery ul li {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  float:left;
+  max-width: calc(100% * 1/4);
+  max-width: -webkit-calc(100% * 1/4);
+  width:100%;
+  padding:5px;
+}
+
+.gallery img {
+  max-width: 100%;
+  height:auto;
+}
+
+.gallery ul:after {
+  content:"";
+  float:none;
+  display:table;
+  clear:both;
+}
