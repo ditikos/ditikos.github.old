@@ -2,7 +2,7 @@
 layout: post
 title: "Wordpress Plugin: equation2015"
 date: 2015-01-30 14:00:00
-categories: site
+categories: [wordpress, plugins]
 featured_image: /images/equation2015.jpg
 comments: true
 ---
