@@ -1,5 +1,5 @@
 ---
-layout: gallery
+layout: gallery2
 title: "Personal Portfolio"
 date: 2015-01-31 14:00:00
 categories: portfolio
