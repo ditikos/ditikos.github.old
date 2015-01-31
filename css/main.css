@@ -383,3 +383,47 @@ ul.posts p {
   display:table;
   clear:both;
 }
+
+/* grid for the gallery page !== .gallery */
+
+#gallery .container {
+  width: 100%;
+  background: red;
+}
+
+#gallery .row {
+  margin-left:-5px;
+  margin-right: -5px;
+}
+
+#gallery .row:before,
+#gallery .row:after
+{
+  content: "";
+  clear:both;
+  float:none;
+  display:table;
+}
+
+#gallery .item {
+  position: relative;
+  width: -webkit-calc(100% * 1/3);
+  width: calc(100% * 1/3);
+  padding:10px 5px;
+  padding-bottom: calc(100% * 1/3);
+  float: left;
+  overflow: hidden;
+}
+
+#gallery .content {
+  position: absolute;
+  left:5px;
+  right:5px;
+  top:10px;
+  bottom:10px;
+}
+
+#gallery .item img {
+  max-width:100%;
+  height:auto;
+}

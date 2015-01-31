@@ -3,7 +3,7 @@ layout: post
 title: "Coding in the new year"
 date: 2015-01-30 14:00:00
 categories: site
-featured_image: /images/looper.jpg
+featured_image: /images/posters/looper.jpg
 comments: false
 ---
 
