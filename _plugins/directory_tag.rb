@@ -37,8 +37,9 @@ module Jekyll
             context.registers[:loop_directory] ||= Hash.new(0)
 
             #only way to load this specific variable.
-            page_url = context.environments.first["page"]["portfolio"]
+            #page_url = context.environments.first["page"]["portfolio"]
 
+            #@attributes['directory']
             images = Dir.glob(File.join(context.environments.first["page"]["portfolio"], @attributes['filter']))
 
             if @attributes['sort'].casecmp( "descending" ) == 0
