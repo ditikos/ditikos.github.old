@@ -1,6 +1,6 @@
 ---
 layout: gallery
-title: "My Work (2012 - 2015)"
+title: "Personal Portfolio"
 date: 2015-01-31 14:00:00
 categories: portfolio
 featured_image: /images/posters/delicatessen.jpg
