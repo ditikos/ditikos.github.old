@@ -8,3 +8,5 @@ comments: true
 portfolio: images/portfolio
 ---
 
+These are works from my position as Senior Web Developer on <a href="http://www.33communication.com" target="_new">33 Communication,</a> during 2012-2015.
+
