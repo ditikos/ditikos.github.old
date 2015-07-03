@@ -1,0 +1,104 @@
+---
+layout: default
+---
+<script>
+jQuery(function($){
+  if ($("#gallery").length>0) {
+    $('#gallery').magnificPopup({
+      delegate: 'a.overlay',
+      type: 'image',
+      tLoading: 'Loading image #%curr%...',
+      mainClass: 'mfp-img-mobile',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function(item) {
+          return item.el.attr('title') + '<small>&copy; 2015 - all rights reserved to their rightful owners</small>';
+        }
+      }
+    });
+  }
+});
+</script>
+<header style="background-image: url({{ site.baseurl }}{{ page.featured_image }});">
+  <div class="container post-container">
+    <a href="{{ site.baseurl }}/" class="home_button"></a>
+    <div class="inner-container">
+      <h1>{{ page.title }}</h1>
+      <ul class="meta">
+        <li>
+          <span>
+            Published
+          </span>
+          {{ page.date | date_to_string }}
+        </li>
+        <li>
+          <span>
+            Category
+          </span>
+          {{ page.categories }}
+        </li>
+      </ul>      
+    </div>
+    <ul class="pagination">
+      {% if page.previous.url %}
+        <li class="previous">
+          <a href="{{ site.baseurl }}{{ page.previous.url }}">
+            Previous
+          </a>
+        </li>
+      {% endif %}
+      {% if page.next.url %}
+      <li class="next">
+        <a href="{{ site.baseurl }}{{ page.next.url }}">
+          Next
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+  {{content}}
+  </div>
+
+  <div id="gallery" class="container">
+    <h2>Gallery</h2>
+    <div class="row">
+      {% for data in site.data.portfolio2 %}
+      <div class="item">
+        <a class="overlay" href="{{ site.baseurl }}/images/portfolio2/{{ data.image }}" title="{{ data.title }}">
+        <div class="image">
+          <img src="{{ site.baseurl }}/images/portfolio2/{{ data.image }}"/>
+        </div>
+        </a>
+      </div>
+      {% endfor %} 
+    </div>
+  </div>
+
+{% if page.comments %}
+  <div class="container">
+       <h2>Discussions</h2>
+       <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'ditikosatgithub'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+{% endif %}
+</article>
